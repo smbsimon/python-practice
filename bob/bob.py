@@ -1,9 +1,7 @@
-#
-# Skeleton file for the Python "Bob" exercise.
-#
-
 def hey(what):
-    if what.strip() == '':
+    what = what.strip()
+
+    if not what:
         return 'Fine. Be that way!'
     elif what.isupper():
         return 'Woah, chill out!'
