@@ -17,8 +17,8 @@ class DNATests(unittest.TestCase):
     def test_transcribes_adenine_to_uracil(self):
         self.assertEqual('U', to_rna('A'))
 
-    # def test_transcribes_all_occurences(self):
-    #     self.assertEqual('UGCACCAGAAUU', to_rna('ACGTGGTCTTAA'))
+    def test_transcribes_all_occurences(self):
+        self.assertEqual('UGCACCAGAAUU', to_rna('ACGTGGTCTTAA'))
 
 
 if __name__ == '__main__':
