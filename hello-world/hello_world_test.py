@@ -6,7 +6,7 @@ import unittest
 import hello_world
 
 
-class BobTests(unittest.TestCase):
+class HelloWorldTests(unittest.TestCase):
 
     def test_hello_without_name(self):
         self.assertEqual(
