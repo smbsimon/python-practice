@@ -2,11 +2,13 @@ import datetime
 import calendar
 import re
 
+weekday_to_number = {weekday: number
+    for (number, weekday) in enumerate(calendar.day_name)}
+
 def meetup_day(year, month, weekday, attribute):
 
-    dayz = {'Monday' : 0, 'Tuesday' : 1, 'Wednesday' : 2, 'Thursday' : 3, 'Friday' : 4, 'Saturday' : 5, 'Sunday' : 6}
     split_month = calendar.monthcalendar(year, month)
-    weekday_number = dayz[weekday]
+    weekday_number = weekday_to_number[weekday]
 
     same_weekday = []
 
