@@ -7,23 +7,22 @@ weekday_to_number = {weekday: number
 
 def meetup_day(year, month, weekday, attribute):
 
-    split_month = calendar.monthcalendar(year, month)
+    month_split_by_weeks = calendar.monthcalendar(year, month)
     weekday_number = weekday_to_number[weekday]
+    dates_split_by_weekdays = []
 
-    same_weekday = []
-
-    for i in range(7):
-        same_weekday.append([row[i] for row in split_month])
+    for i in month_split_by_weeks:
+        dates_split_by_weekdays = zip(*month_split_by_weeks)
 
     if any(char.isdigit() for char in attribute):
         attribute = int(re.sub(r'\D', "", attribute))
-        if same_weekday[weekday_number][0] > 0:
+        if dates_split_by_weekdays[weekday_number][0] > 0:
             attribute = attribute - 1
-        date = same_weekday[weekday_number][attribute]
+        date = dates_split_by_weekdays[weekday_number][attribute]
     elif attribute == 'last':
-        date = same_weekday[weekday_number][-1]
+        date = dates_split_by_weekdays[weekday_number][-1]
     elif attribute == 'teenth':
-        for i in same_weekday[weekday_number]:
+        for i in dates_split_by_weekdays[weekday_number]:
             if i >= 13:
                 date = i
                 break
