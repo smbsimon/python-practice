@@ -9,13 +9,13 @@ except ImportError:
     MeetupDayException = Exception
 
 class MeetupTest(unittest.TestCase):
-    # def test_monteenth_of_may_2013(self):
-    #     self.assertEqual(date(2013, 5, 13),
-    #                      meetup_day(2013, 5, 'Monday', 'teenth'))
+    def test_monteenth_of_may_2013(self):
+        self.assertEqual(date(2013, 5, 13),
+                         meetup_day(2013, 5, 'Monday', 'teenth'))
 
-    # def test_saturteenth_of_february_2013(self):
-    #     self.assertEqual(date(2013, 2, 16),
-    #                      meetup_day(2013, 2, 'Saturday', 'teenth'))
+    def test_saturteenth_of_february_2013(self):
+        self.assertEqual(date(2013, 2, 16),
+                         meetup_day(2013, 2, 'Saturday', 'teenth'))
 
     def test_first_tuesday_of_may_2013(self):
         self.assertEqual(date(2013, 5, 7),
