@@ -44,6 +44,10 @@ class MeetupTest(unittest.TestCase):
         self.assertEqual(date(2012, 2, 29),
                          meetup_day(2012, 2, 'Wednesday', 'last'))
 
+    def test_last_wednesday_of_june_2015(self):
+        self.assertEqual(date(2015, 6, 24),
+                         meetup_day(2015, 6, 'Wednesday', 'last'))
+
     def test_first_friday_of_december_2012(self):
         self.assertEqual(date(2012, 12, 7),
                          meetup_day(2012, 12, 'Friday', '1st'))
