@@ -3,11 +3,6 @@ import unittest
 
 from meetup import meetup_day
 
-try:
-    from meetup import MeetupDayException
-except ImportError:
-    MeetupDayException = Exception
-
 class MeetupTest(unittest.TestCase):
     def test_monteenth_of_may_2013(self):
         self.assertEqual(date(2013, 5, 13),
@@ -16,6 +11,14 @@ class MeetupTest(unittest.TestCase):
     def test_saturteenth_of_february_2013(self):
         self.assertEqual(date(2013, 2, 16),
                          meetup_day(2013, 2, 'Saturday', 'teenth'))
+
+    def test_monteenth_of_may_2014(self):
+        self.assertEqual(date(2014, 5, 19),
+                         meetup_day(2014, 5, 'Monday', 'teenth'))
+
+    def test_thursteenth_of_march_2015(self):
+        self.assertEqual(date(2015, 3, 19),
+                         meetup_day(2015, 3, 'Thursday', 'teenth'))
 
     def test_first_tuesday_of_may_2013(self):
         self.assertEqual(date(2013, 5, 7),
