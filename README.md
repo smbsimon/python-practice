@@ -10,6 +10,21 @@ Bob is a lackadaisical teenager. In conversation, his responses are very limited
 - He answers 'Whatever.' to anything else.
 
 
+##### Difference Of Squares
+
+Find the difference between the sum of the squares and the square of the sums of the first n natural numbers.
+
+The sum of the squares of the first ten natural numbers is:
+
+    1 ** 2 + 2 ** 2 + ... + 10 ** 2 = 385
+
+The square of the sum of the first ten natural numbers is:
+
+    (1 + 2 + ... + 10) ** 2 = 55 ** 2 = 3025
+
+Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 - 385 = 2640.
+
+
 ##### Gigasecond
 
 Write a program that will calculate the date that someone turned or will celebrate their 1 Gs anniversary. A gigasecond is one billion (10**9) seconds.
